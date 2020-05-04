@@ -1,4 +1,4 @@
-package com.allen.giflib.Controller;
+package com.allen.giflib.Model;
 
 public class Contact {
     private int id;
