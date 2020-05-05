@@ -1,6 +1,7 @@
 package com.allen.giflib.Data;
 
 import com.allen.giflib.Model.Category;
+import com.allen.giflib.Model.Gif;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -16,5 +17,14 @@ public class CategoryRepository {
 
     public static List<Category> getAllCategories() {
         return ALL_CATEGORIES;
+    }
+
+    public Category findById(int id) {
+        for(Category category : ALL_CATEGORIES) {
+            if(category.getId() == id) {
+                return category;
+            }
+        }
+        return null;
     }
 }
